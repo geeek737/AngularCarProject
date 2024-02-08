@@ -1,0 +1,25 @@
+<app-car-list [cars]="cars" (carSelected)="displayCar($event)"></app-car-list>
+<div *ngIf="selectedCar">
+  <div *ngIf="selectedCarImgSrc">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ selectedCar.brand }}</mat-card-title>
+        <mat-card-subtitle>{{ selectedCar.model }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image 
+      [src]="selectedCarImgSrc"
+      [alt]="selectedCar.brand + ' ' + selectedCar.model"
+       >
+      <!-- <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content> -->
+    </mat-card>
+  </div>
+</div>
+
+<router-outlet />
