@@ -4,21 +4,23 @@ import { RouterOutlet } from '@angular/router';
 import { Car, CarService } from './services/car/car.service';
 import { FontSizeDirective } from './directives/car/font-size.directive';
 import { CarListComponent } from './car/car-list/car-list.component';
-import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddCarFormComponent } from './car/add-car-form/add-car-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
-    RouterOutlet, 
-    FontSizeDirective, 
+    CommonModule,
+    RouterOutlet,
+    FontSizeDirective,
     CarListComponent,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    AddCarFormComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

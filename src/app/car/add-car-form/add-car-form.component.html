@@ -1,0 +1,12 @@
+<form [formGroup]="carForm" (ngSubmit)="submit()" class="form-car">
+  <mat-form-field appearance="fill" class="from-field">
+    <mat-label>Brand</mat-label>
+    <input matInput formControlName="brand" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Model</mat-label>
+    <input matInput formControlName="model" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Add Car</button>
+</form>

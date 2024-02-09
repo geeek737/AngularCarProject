@@ -5,3 +5,20 @@
 .example-header-image {
   background-size: cover;
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.container-result, .container-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-result {
+  flex-direction: column;
+  gap: 50px;
+}
